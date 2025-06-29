@@ -1,6 +1,10 @@
 import Image from "next/image";
 import PartnerCarousel  from './components/PartnerCarousel';
 import RealisationCard from './components/RealisationCard';
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -33,13 +37,7 @@ export default function Home() {
       <main className="pt-24 pb-16 px-4 max-w-6xl mx-auto space-y-32">
 
         {/* ACCUEIL */}
-        {/* <section id="accueil" className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Votre expert BIM & Coordination 3D</h2>
-          <p className="text-lg text-gray-600">
-            Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
-          </p>
-        </section> */}
-        <section
+        {/* <section
           id="accueil"
           className="min-h-screen flex flex-col items-center justify-center bg-white px-6 text-center"
         >
@@ -49,21 +47,22 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl">
             Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
           </p>
-        </section>
-        {/* À PROPOS */}
-        {/* <section id="a-propos">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">À propos</h2>
-          <p className="text-gray-700 mb-4">
-            CMP BIM accompagne les projets complexes grâce à une expertise en modélisation, coordination et formation BIM. Nos solutions s’intègrent dans les projets emblématiques comme la Ligne 15, le Village Olympique ou encore Roissy T4.
-          </p>
-          <div className="text-sm text-gray-600 space-y-1">
-            <p><strong>Adresse :</strong> 60 Rue François Ier, 75008 Paris</p>
-            <p><strong>Email :</strong> <a href="mailto:cmp.bim@outlook.fr" className="text-blue-600 underline">cmp.bim@outlook.fr</a></p>
-            <p><strong>Logiciels :</strong> AutoCAD, Revit, Navisworks, Mensura, SketchUp, Trimble Connect</p>
-            <p><strong>Matériel :</strong> Ordinateurs HP (modèle à confirmer)</p>
-          </div>
         </section> */}
-        <section
+         <section id="accueil" className="text-center space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Votre expert BIM & Coordination 3D
+          </h1>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
+          </p>
+          <Button className="mt-4">Nous contacter</Button>
+        </section>
+
+        <Separator />
+
+        
+        {/* À PROPOS */}
+        {/* <section
           id="a-propos"
           className="bg-gray-50 py-16 px-6 text-gray-800"
         >
@@ -88,22 +87,37 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
+        <section id="a-propos">
+          <h2 className="text-3xl font-semibold text-center mb-8">À propos</h2>
+          <Card className="bg-muted">
+            <CardContent className="p-6 space-y-6 text-sm">
+              <p>
+                CMP BIM accompagne les projets complexes grâce à une expertise en modélisation, coordination et formation BIM.
+                Nos solutions sont intégrées dans des projets emblématiques tels que la Ligne 15, le Village Olympique ou Roissy T4.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <p><strong>📍 Adresse :</strong><br />60 Rue François Ier, 75008 Paris</p>
+                </div>
+                <div>
+                  <p><strong>✉️ Email :</strong><br /><a href="mailto:cmp.bim@outlook.fr" className="underline text-blue-600">cmp.bim@outlook.fr</a></p>
+                </div>
+                <div>
+                  <p><strong>🛠 Logiciels :</strong><br />AutoCAD, Revit, Navisworks, Mensura, SketchUp, Trimble Connect</p>
+                </div>
+                <div>
+                  <p><strong>💻 Matériel :</strong><br />Ordinateurs HP (modèle à confirmer)</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <Separator />
 
         {/* PRESTATIONS */}
-        {/* <section id="prestations">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Nos prestations</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Management BIM : Convention, PEB, CCTP, DOE numérique</li>
-            <li>Coordination 3D dans un environnement collaboratif</li>
-            <li>Modélisation 3D de projets complexes</li>
-            <li>Intégration de données attributaires</li>
-            <li>Plans 2D & coordination technique</li>
-            <li>Animations immersives Twinmotion</li>
-            <li>Formations BIM (aménagement urbain, VRD...)</li>
-          </ul>
-        </section> */}
-        <section
+        {/* <section
           id="prestations"
           className="py-16 px-6 bg-white text-gray-900"
         >
@@ -118,6 +132,27 @@ export default function Home() {
               <li><strong>Animations Twinmotion</strong> immersives</li>
               <li><strong>Formations BIM</strong> (VRD, aménagement urbain…)</li>
             </ul>
+          </div>
+        </section> */}
+        <section id="prestations">
+          <h2 className="text-3xl font-semibold text-center mb-8">Nos prestations</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              "Management BIM : Convention, PEB, CCTP, DOE numérique",
+              "Coordination 3D dans un environnement collaboratif",
+              "Modélisation 3D de projets complexes",
+              "Intégration de données attributaires",
+              "Production 2D & coordination technique",
+              "Animations immersives Twinmotion",
+              "Formations BIM (VRD, aménagement urbain…)",
+            ].map((item, index) => (
+              <Card key={index} className="bg-muted/30">
+                <CardContent className="p-4">
+                  <Badge variant="outline" className="mb-2">{`Service ${index + 1}`}</Badge>
+                  <p>{item}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
