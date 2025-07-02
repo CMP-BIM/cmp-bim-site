@@ -1,10 +1,37 @@
+'use client';
+
+import { useState } from 'react';
+
 import Image from "next/image";
 import PartnerCarousel  from './components/PartnerCarousel';
 import RealisationCard from './components/RealisationCard';
-import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
+import Navbar from "./components/Navbar"; 
+
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+
+import '../app/globals.css'
+// import {
+//   Sheet,
+//   SheetContent,
+//   SheetTrigger,
+// } from "./components/ui/sheet"
+import { Menu } from "lucide-react"
+
+
+// const navLinks = [
+//   { href: "#accueil", label: "Accueil" },
+//   { href: "#a-propos", label: "À propos" },
+//   { href: "#prestations", label: "Prestations" },
+//   { href: "#realisations", label: "Références" },
+//   { href: "#contact", label: "Contact" },
+// ]
+
+
+
 
 export default function Home() {
   return (
@@ -12,7 +39,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
     <div className="scroll-smooth font-sans">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
+      {/* <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
         <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-4">
           <h1 className="text-xl font-bold text-blue-600">CMP BIM</h1>
           <ul className="flex gap-6 text-gray-700 font-medium text-sm">
@@ -23,7 +50,9 @@ export default function Home() {
             <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
           </ul>
         </nav>
-      </header>
+      </header> */}
+      <Navbar />
+
 
       <main className="pt-24 pb-16 px-4 max-w-6xl mx-auto space-y-32">
 
