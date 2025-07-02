@@ -10,16 +10,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-      {/* <div>
-            <h1 className="text-4xl font-bold text-blue-700 mb-4">Votre expert BIM pour l’aménagement urbain</h1>
-            <p className="mb-6">
-              CMP BIM accompagne les grands projets d’infrastructure et d’aménagement avec son expertise en production BIM, coordination 3D, et modélisation.
-            </p>
-            <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-              Contactez-nous
-            </a>
-          </div> */}
-  <div className="scroll-smooth font-sans">
+    <div className="scroll-smooth font-sans">
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
         <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-4">
@@ -36,18 +27,6 @@ export default function Home() {
 
       <main className="pt-24 pb-16 px-4 max-w-6xl mx-auto space-y-32">
 
-        {/* ACCUEIL */}
-        {/* <section
-          id="accueil"
-          className="min-h-screen flex flex-col items-center justify-center bg-white px-6 text-center"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Votre expert BIM & Coordination 3D
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl">
-            Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
-          </p>
-        </section> */}
          <section id="accueil" className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Votre expert BIM & Coordination 3D
@@ -117,23 +96,6 @@ export default function Home() {
         <Separator />
 
         {/* PRESTATIONS */}
-        {/* <section
-          id="prestations"
-          className="py-16 px-6 bg-white text-gray-900"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-semibold mb-6">Nos prestations</h2>
-            <ul className="grid gap-4 sm:grid-cols-2 text-left text-gray-700 list-disc list-inside">
-              <li><strong>Management BIM</strong> : Convention, PEB, CCTP, DOE numérique</li>
-              <li><strong>Coordination 3D</strong> dans un environnement collaboratif</li>
-              <li><strong>Modélisation 3D</strong> de projets complexes</li>
-              <li><strong>Intégration de données</strong> attributaires</li>
-              <li><strong>Production 2D</strong> & coordination technique</li>
-              <li><strong>Animations Twinmotion</strong> immersives</li>
-              <li><strong>Formations BIM</strong> (VRD, aménagement urbain…)</li>
-            </ul>
-          </div>
-        </section> */}
         <section id="prestations">
           <h2 className="text-3xl font-semibold text-center mb-8">Nos prestations</h2>
           <div className="grid sm:grid-cols-2 gap-6">

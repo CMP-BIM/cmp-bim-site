@@ -19,11 +19,14 @@ export default function PartnerCarousel() {
 
   useEffect(() => {
     const carousel = carouselRef.current;
+    console.log("carouselRef:", carousel);
+
     if (!carousel) return;
 
     let scrollAmount = 0;
     const scrollStep = 1;
-    const maxScroll = carousel.scrollWidth / 2;
+    const maxScroll = carousel.scrollWidth;
+    // const maxScroll = carousel.scrollWidth / 2;
 
     const scroll = () => {
       if (carousel.scrollLeft >= maxScroll) {
