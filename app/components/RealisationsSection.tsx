@@ -35,13 +35,29 @@ export default function RealisationsSection() {
               ]}
             />
             <RealisationCard
-              title="Village des Athlètes"
+              title="Village des Athlètes (Maquettes 3D)"
               folder="Village_des_Athletes_-_VOP"
               description="Contribution au projet olympique du Village des Athlètes."
               images={['Annotation_2025-05-16 _1.png', 'Annotation_2025-05-16_2.png', 'Annotation_2025-05-16_3.png'
                 , 'Annotation_2025-05-16_4.png', 'Annotation_2025-05-16_5.png', 'Annotation_2025-05-16_6.png'
                 , 'Annotation_2025-05-16_7.png', 'Annotation_2025-05-16_8.png', 'Annotation_2025-05-16_9.png'
                 , 'Annotation_2025-05-16_10.png', 'Annotation_2025-05-16_11.png', 'vop_attributs_1.png', 'vop_attributs_2.png'
+              ]}
+            />
+            <RealisationCard
+              title="Village des Athlètes (Plans 2D)"
+              folder="Village_des_Athletes_-_VOP_2D"
+              description="Contribution au projet olympique du Village des Athlètes."
+              images={['VA_2d-1.png',
+                'VA_2d-2.png', 
+                'VA_2d-3.png',
+                'VA_2d-4.png',
+                'VA_2d-5.png',
+                'VA_2d-6.png',
+                'VA_2d-7.png',
+                'VA_2d-8.png',
+                'VA_2d-9.png',
+
               ]}
             />
             <RealisationCard
