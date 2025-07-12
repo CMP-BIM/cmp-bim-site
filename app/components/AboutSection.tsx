@@ -35,6 +35,7 @@ export default function AboutSection() {
                 <li>Mensura</li>
                 <li>SketchUp</li>
                 <li>Trimble Connect</li>
+                <li>Covadis</li>
               </ul>
             </div>
 
