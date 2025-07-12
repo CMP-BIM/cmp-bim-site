@@ -12,7 +12,7 @@ export default function AboutSection() {
           </p>
           <div className="grid gap-4 md:grid-cols-2 text-gray-700">
             <div>
-              <p><strong>📍 Adresse :</strong><br />60 Rue François Ier, 75008 Paris</p>
+              <p><strong>📍 Adresse :</strong><br />1 rue Marguerin, 75014 Paris</p>
             </div>
             <div>
               <p><strong>✉️ Email :</strong><br /><a href="mailto:cmp.bim@outlook.fr" className="underline text-blue-600">cmp.bim@outlook.fr</a></p>

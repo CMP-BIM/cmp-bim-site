@@ -82,7 +82,7 @@
 //               </p>
 //               <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
 //                 <div>
-//                   <p><span className="font-medium">📍 Adresse :</span><br />60 Rue François Ier, 75008 Paris</p>
+//                   <p><span className="font-medium">📍 Adresse :</span><br />1 rue Marguerin, 75014 Paris</p>
 //                 </div>
 //                 <div>
 //                   <p><span className="font-medium">✉️ Email :</span><br /><a href="mailto:cmp.bim@outlook.fr" className="text-blue-600 underline">cmp.bim@outlook.fr</a></p>
@@ -106,7 +106,7 @@
 //               </p>
 //               <div className="grid md:grid-cols-2 gap-4">
 //                 <div>
-//                   <p><strong>📍 Adresse :</strong><br />60 Rue François Ier, 75008 Paris</p>
+//                   <p><strong>📍 Adresse :</strong><br />1 rue Marguerin, 75014 Paris</p>
 //                 </div>
 //                 <div>
 //                   <p><strong>✉️ Email :</strong><br /><a href="mailto:cmp.bim@outlook.fr" className="underline text-blue-600">cmp.bim@outlook.fr</a></p>
@@ -219,7 +219,7 @@
 //         {/* CONTACT */}
 //         <section id="contact" className="text-center">
 //           <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contactez-nous</h2>
-//           <p className="text-gray-600 mb-2">📍 60 Rue François Ier, 75008 Paris</p>
+//           <p className="text-gray-600 mb-2">📍 1 rue Marguerin, 75014 Paris</p>
 //           <p className="text-gray-600 mb-4">✉️ <a href="mailto:cmp.bim@outlook.fr" className="text-blue-600 underline">cmp.bim@outlook.fr</a></p>
 //           <a href="mailto:cmp.bim@outlook.fr" className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
 //             Demander un devis
