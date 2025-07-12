@@ -91,7 +91,7 @@
 //                   <p><span className="font-medium">🛠️ Logiciels :</span><br />AutoCAD, Revit, Navisworks, Mensura, SketchUp, Trimble Connect</p>
 //                 </div>
 //                 <div>
-//                   <p><span className="font-medium">💻 Matériel :</span><br />Ordinateurs HP (modèle à confirmer)</p>
+//                   <p><span className="font-medium">💻 Matériel :</span><br />Ordinateur portable HP ZBook Studio G8</p>
 //                 </div>
 //               </div>
 //             </div>
@@ -115,7 +115,7 @@
 //                   <p><strong>🛠 Logiciels :</strong><br />AutoCAD, Revit, Navisworks, Mensura, SketchUp, Trimble Connect</p>
 //                 </div>
 //                 <div>
-//                   <p><strong>💻 Matériel :</strong><br />Ordinateurs HP (modèle à confirmer)</p>
+//                   <p><strong>💻 Matériel :</strong><br />Ordinateur portable HP ZBook Studio G8</p>
 //                 </div>
 //               </div>
 //             </CardContent>
