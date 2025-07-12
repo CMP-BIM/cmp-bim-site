@@ -123,7 +123,7 @@ const services = [
   {
     title: "Management BIM : Convention, PEB, CCTP, DOE numérique",
     description:
-      "Rédaction de conventions, mise en place de PEB, CCTP et constitution du DOE numérique complet pour vos projets. Accompagnement personnalisé.",
+      "Rédaction de conventions, mise en place de PEB, CCTP et constitution du DOE numérique complet pour vos projets. Accompagnement personnalisé. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
   },
   {
     title: "Coordination 3D dans un environnement collaboratif",
