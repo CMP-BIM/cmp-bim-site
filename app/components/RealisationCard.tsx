@@ -43,7 +43,7 @@ export default function RealisationCard({ title, folder, description, images }: 
           onClick={() => setOpen(true)}
           className="mt-4 inline-block text-blue-600 font-medium hover:underline"
         >
-          Voir +
+          Voir plus
         </button>
       </div>
 
