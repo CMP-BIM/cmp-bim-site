@@ -4,19 +4,23 @@ import ServicesSection from './components/ServicesSection';
 import RealisationsSection from './components/RealisationsSection';
 import PartnersSection from './components/PartnersSection';
 import ContactSection from './components/ContactSection';
+import CopyEmailButton from "./components/CopyEmailButton";
+
+
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { toast } from "@/components/ui/use-toast";
+// import { toast } from "@/components/ui/use-toast";
 
 
-export default function Home() {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("cmp.bim@outlook.fr");
-    toast({
-      title: "📋 Email copié",
-      description: "L’adresse cmp.bim@outlook.fr a été copiée dans le presse-papiers.",
-    });
-  };
+// export default function Home() {
+//   const handleCopyEmail = () => {
+//     navigator.clipboard.writeText("cmp.bim@outlook.fr");
+//     toast({
+//       title: "📋 Email copié",
+//       description: "L’adresse cmp.bim@outlook.fr a été copiée dans le presse-papiers.",
+//     });
+//   };
+
 
 export default function Home() {
   return (
@@ -61,8 +65,8 @@ export default function Home() {
             <p className="text-muted text-lg max-w-2xl mt-4">
               Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
             </p>
-              <Button className="mt-4">Nous contacter</Button>
-
+              {/* <Button className="mt-4">Nous contacter</Button> */}
+              <CopyEmailButton />
             {/* <Button onClick={handleCopyEmail} className="mt-6">
               📋 Copier l’email
             </Button> */}
