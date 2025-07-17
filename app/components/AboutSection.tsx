@@ -62,7 +62,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutSection() {
   return (
-    <section id="a-propos" className="px-4 sm:px-0 max-w-6xl mx-auto">
+    <section id="a-propos" className="px-4 sm:px-0 max-w-6xl mx-auto mt-8">
       <h2 className="text-3xl font-semibold text-center mb-8">À propos</h2>
       <Card className="bg-muted/50 shadow-sm">
         <CardContent className="p-6 space-y-6 text-sm text-gray-800">
