@@ -94,13 +94,14 @@ export default function AboutSection() {
             <div className="space-y-2">
               <p className="font-semibold">🛠 Logiciels :</p>
               <ul className="grid grid-cols-2 gap-1 text-sm list-disc list-inside pl-2">
-                <li>AutoCAD</li>
-                <li>Revit</li>
-                <li>Navisworks</li>
                 <li>Mensura</li>
-                <li>SketchUp</li>
-                <li>Trimble Connect</li>
                 <li>Covadis</li>
+                <li>Autocad / Autoturn</li>
+                <li>Revit</li>
+                <li>Trimble connect</li>
+                <li>Twinmotion</li>
+                <li>Sketchup</li>
+                <li>Navisworks</li>
               </ul>
             </div>
 

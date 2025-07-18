@@ -66,7 +66,7 @@ export default function Home() {
               Spécialiste en modélisation, coordination BIM et formation pour l’aménagement urbain et les projets d'infrastructure.
             </p>
               {/* <Button className="mt-4">Nous contacter</Button> */}
-              <CopyEmailButton />
+              <CopyEmailButton  />
             {/* <Button onClick={handleCopyEmail} className="mt-6">
               📋 Copier l’email
             </Button> */}
@@ -76,15 +76,15 @@ export default function Home() {
 
         {/* RESTE DU SITE */}
 
-        <Separator />
+        <Separator  />
 
         <AboutSection />
 
-        <Separator />
+        <Separator className='m-10'/>
 
         <ServicesSection />
 
-        <Separator />
+        <Separator className='m-10'/>
 
         <RealisationsSection />
 

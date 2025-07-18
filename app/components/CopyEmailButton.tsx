@@ -20,7 +20,7 @@ export default function CopyEmailButton() {
       > */}
         <button
         onClick={handleCopyEmail}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200"
+        className="mt-5 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-md transition-colors duration-200"
       >
         📋 Copier l’email
       </button>
