@@ -5,6 +5,7 @@ import RealisationsSection from './components/RealisationsSection';
 import PartnersSection from './components/PartnersSection';
 import ContactSection from './components/ContactSection';
 import CopyEmailButton from "./components/CopyEmailButton";
+import ValuesSection from "./components/ValuesSection";
 
 
 import { Button } from "@/components/ui/button";
@@ -76,15 +77,27 @@ export default function Home() {
 
         {/* RESTE DU SITE */}
 
-        <Separator  />
+        <div className="w-3/4 mx-auto">
+          <Separator />
+        </div>
 
         <AboutSection />
 
-        <Separator className='m-10'/>
+        {/* <div className="w-3/4 mx-auto">
+          <Separator  className='my-10' />
+        </div> */}
+
+        <ValuesSection />
+
+        <div className="w-3/4 mx-auto">
+          <Separator className='my-10'/>
+        </div>
 
         <ServicesSection />
-
-        <Separator className='m-10'/>
+        
+        <div className="w-3/4 mx-auto">
+          <Separator className='my-10'/>
+        </div>
 
         <RealisationsSection />
 

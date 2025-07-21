@@ -66,66 +66,100 @@
 //   );
 // }
 
+// "use client";
+
+// import { useKeenSlider } from "keen-slider/react";
+// import "keen-slider/keen-slider.min.css";
+// import Image from "next/image";
+// import { useEffect, useRef } from "react";
+
+// const logos = [
+//   "egis.png", "vinci.png", "solideo.png", "adp.png", "disney.png",
+//   "sncf.png", "cazal.png", "cesi.png", "gtm.png", "cabinet-merlin.png",
+//   "sgp.png", "asf.png", "dao.png", "segmentis.png", "equans.png",
+// ];
+
+// export default function PartnerCarousel() {
+//   const [sliderRef] = useKeenSlider<HTMLDivElement>({
+//     loop: true,
+//     slides: {
+//       perView: 4,
+//       spacing: 16,
+//     },
+//     renderMode: "performance",
+//     drag: true,
+//     breakpoints: {
+//       "(max-width: 768px)": {
+//         slides: { perView: 2, spacing: 12 },
+//       },
+//       "(max-width: 480px)": {
+//         slides: { perView: 1.5, spacing: 10 },
+//       },
+//     },
+//     created(slider) {
+//       let interval: NodeJS.Timeout;
+//       const start = () =>
+//         (interval = setInterval(() => {
+//           if (slider) slider.next();
+//         }, 2500));
+//       const stop = () => clearInterval(interval);
+
+//       slider.container.addEventListener("mouseover", stop);
+//       slider.container.addEventListener("mouseout", start);
+//       start();
+//     },
+//   });
+
+//   return (
+//     <div ref={sliderRef} className="keen-slider">
+//       {logos.map((logo, index) => (
+//         <div
+//           key={index}
+//           className="keen-slider__slide flex justify-center items-center"
+//         >
+//           <Image
+//             src={`/logos/${logo}`}
+//             alt={`Logo ${logo}`}
+//             width={140}
+//             height={80}
+//             className="grayscale hover:grayscale-0 transition duration-300 object-contain"
+//           />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+
 "use client";
 
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 const logos = [
-  "egis.png", "vinci.png", "solideo.png", "adp.png", "disney.png",
-  "sncf.png", "cazal.png", "cesi.png", "gtm.png", "cabinet-merlin.png",
-  "sgp.png", "asf.png", "dao.png", "segmentis.png", "equans.png",
+  "EGIS.png", "Vinci.png", "solideo.png", "ADP.png", "disney.png",
+  "sncf.png", "cazal.jpg", "cesi.png", "GTM.png", "cabinet-merlin.png",
+  "sgp.png", "ASF.png", "dao.png", "segmentis.png", "equans.png",
 ];
 
 export default function PartnerCarousel() {
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    slides: {
-      perView: 4,
-      spacing: 16,
-    },
-    renderMode: "performance",
-    drag: true,
-    breakpoints: {
-      "(max-width: 768px)": {
-        slides: { perView: 2, spacing: 12 },
-      },
-      "(max-width: 480px)": {
-        slides: { perView: 1.5, spacing: 10 },
-      },
-    },
-    created(slider) {
-      let interval: NodeJS.Timeout;
-      const start = () =>
-        (interval = setInterval(() => {
-          if (slider) slider.next();
-        }, 2500));
-      const stop = () => clearInterval(interval);
-
-      slider.container.addEventListener("mouseover", stop);
-      slider.container.addEventListener("mouseout", start);
-      start();
-    },
-  });
+  const duplicatedLogos = [...logos, ...logos]; // pour la boucle fluide
 
   return (
-    <div ref={sliderRef} className="keen-slider">
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="keen-slider__slide flex justify-center items-center"
-        >
-          <Image
-            src={`/logos/${logo}`}
-            alt={`Logo ${logo}`}
-            width={140}
-            height={80}
-            className="grayscale hover:grayscale-0 transition duration-300 object-contain"
-          />
-        </div>
-      ))}
+    <div className="overflow-hidden w-full py-4 bg-white">
+      <div className="animate-marquee flex whitespace-nowrap gap-16">
+        {duplicatedLogos.map((logo, index) => (
+          <div key={index} className="flex-shrink-0 flex items-center justify-center">
+            <Image
+              src={`/logos/${logo}`}
+              alt={`Logo ${logo}`}
+              width={140}
+              height={80}
+              className="grayscale hover:grayscale-0 transition duration-300 object-contain"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
+
