@@ -136,9 +136,9 @@
 import Image from "next/image";
 
 const logos = [
-  "EGIS.png", "Vinci.png", "solideo.png", "ADP.png", "disney.png",
-  "sncf.png", "cazal.jpg", "cesi.png", "GTM.png", "cabinet-merlin.png",
-  "sgp.png", "ASF.png", "dao.png", "segmentis.png", "equans.png",
+  "EGIS.png", "Vinci.png", "SOLIDEO.png", "ADP.png", "Disney.png",
+  "SNCF.png", "Cazal.jpg", "CESI.png", "GTM.png", "cabinet-merlin.png",
+  "SGP.png", "ASF.png", "dao.png", "segmentis.png", "equans.png",
 ];
 
 export default function PartnerCarousel() {
