@@ -1,6 +1,5 @@
 'use client';
 import RealisationCard from './RealisationCard';
-import clsx from 'clsx';
 
 const realisationList = [
   {
@@ -55,18 +54,17 @@ const realisationList = [
 export default function RealisationsSection() {
   return (
     <section id="realisations" className="px-4 sm:px-0 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Réalisations</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <h2 className="text-3xl font-semibold text-gray-900 mb-8 text-center">Réalisations</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
         {realisationList.map((realisation, index) => {
-          const isLast = index === realisationList.length - 1;
-          const isOdd = realisationList.length % 2 !== 0;
-
+          const isLastAndOdd = index === realisationList.length - 1 && realisationList.length % 3 !== 0;
+          
           return (
-            <div
-              key={index}
-              className={clsx({
-                'md:col-span-3 md:mx-auto md:max-w-md': isLast && isOdd,
-              })}
+            <div 
+              key={realisation.title}
+              className={`w-full ${
+                isLastAndOdd ? 'lg:col-start-2' : ''
+              }`}
             >
               <RealisationCard {...realisation} />
             </div>

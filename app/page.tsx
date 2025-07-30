@@ -1,26 +1,12 @@
-import Navbar from './components/Navbar';
-import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
-import RealisationsSection from './components/RealisationsSection';
-import PartnersSection from './components/PartnersSection';
-import ContactSection from './components/ContactSection';
-import CopyEmailButton from "./components/CopyEmailButton";
-import ValuesSection from "./components/ValuesSection";
-
-
-import { Button } from "@/components/ui/button";
+import Navbar from '@/features/layout/header';
+import AboutSection from '@/components/AboutSection';
+import ServicesSection from '@/components/ServicesSection';
+import RealisationsSection from '@/components/RealisationsSection';
+import PartnersSection from '@/components/PartnersSection';
+import ContactSection from '@/components/ContactSection';
+import CopyEmailButton from "@/components/CopyEmailButton";
+import ValuesSection from "@/components/ValuesSection";
 import { Separator } from "@/components/ui/separator";
-// import { toast } from "@/components/ui/use-toast";
-
-
-// export default function Home() {
-//   const handleCopyEmail = () => {
-//     navigator.clipboard.writeText("cmp.bim@outlook.fr");
-//     toast({
-//       title: "📋 Email copié",
-//       description: "L’adresse cmp.bim@outlook.fr a été copiée dans le presse-papiers.",
-//     });
-//   };
 
 
 export default function Home() {
@@ -94,7 +80,7 @@ export default function Home() {
         </div>
 
         <ServicesSection />
-        
+
         <div className="w-3/4 mx-auto">
           <Separator className='my-10'/>
         </div>
