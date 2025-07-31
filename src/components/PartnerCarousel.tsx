@@ -1,33 +1,35 @@
-
 "use client";
 
-import Image from "next/image";
+import { Marquee } from "@/components/magicui/marquee";
 
-const logos = [
-  "EGIS.png", "Vinci.png", "SOLIDEO.png", "ADP.png", "Disney.png",
-  "SNCF.png", "Cazal.jpg", "CESI.png", "GTM.jpg", "cabinet-merlin.png",
-  "SGP.png", "ASF.png", "dao.png", "segmentis.png", "equans.png", "Cognac-TP.png", "VOP-Paris-2024",
+const companies = [
+    "EGIS.png", "Vinci.png", "SOLIDEO.png", "ADP.png", "Disney.png",
+    "SNCF.png", "Cazal.jpg", "CESI.png", "GTM.jpg", "cabinet-merlin.png",
+    "SGP.png", "ASF.png", "Cognac-TP.png", "VOP-Paris-2024.png",
 ];
 
 export default function PartnerCarousel() {
-  const duplicatedLogos = [...logos, ...logos]; // pour la boucle fluide
-
-  return (
-    <div className="overflow-hidden w-full py-4 bg-white">
-      <div className="animate-marquee flex whitespace-nowrap gap-16">
-        {duplicatedLogos.map((logo, index) => (
-          <div key={index} className="flex-shrink-0 flex items-center justify-center">
-            <Image
-              src={`/logos/${logo}`}
-              alt={`Logo ${logo}`}
-              width={140}
-              height={80}
-              className="grayscale hover:grayscale-0 transition duration-300 object-contain"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <section id="companies">
+            <div className="py-14">
+                <div className="container mx-auto px-4 md:px-8">
+                    <div className="relative">
+                        <Marquee className="max-w-full [--duration:40s] [--delay:20s] [--gap:2rem]">
+                            {companies.map((logo, idx) => (
+                                <img
+                                    key={idx}
+                                    src={`/logos/${logo}`}
+                                    className="size-1/3 px-6 dark:brightness-0 dark:invert"
+                                    alt={logo}
+                                />
+                            ))}
+                        </Marquee>
+                        <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-white dark:from-black"></div>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-white dark:from-black"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
