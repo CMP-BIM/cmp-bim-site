@@ -1,6 +1,7 @@
 "use client";
 
-import { Marquee } from "@/components/magicui/marquee";
+import { Marquee } from "./ui/marquee";
+
 
 const companies = [
     "EGIS.png", "Vinci.png", "SOLIDEO.png", "ADP.png", "Disney.png",
@@ -32,4 +33,3 @@ export default function PartnerCarousel() {
         </section>
     );
 }
-

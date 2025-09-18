@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
@@ -8,6 +9,8 @@ import { motion } from "framer-motion";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const logoSrc = "/logo-site/logo-CMP-BG.png";
+
   
   // Couleurs adaptatives basées sur le scroll
   const textColor = useTransform(scrollY, [0, 800], ["rgba(255,255,255,0.8)", "rgba(55,65,81,0.8)"]);
@@ -31,12 +34,21 @@ export default function Header() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+          {/* <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">C</span>
+
+          </div> */}
+          <div>
+           <Image
+            width={92}
+            height={92}
+            src={logoSrc}
+            alt={"CMP BIM logo"}
+          />
           </div>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+          {/* <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
             CMP BIM
-          </h1>
+          </h1> */}
         </motion.div>
 
         {/* Desktop navigation moderne */}
