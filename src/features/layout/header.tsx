@@ -1,15 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
+import { LogoSvg } from "@/components/LogoSvg";
+import { text } from "stream/consumers";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
-  const logoSrc = "/logo-site/logo-CMP-BG.png";
+   const [logoColorClass, setLogoColorClass] = useState("text-background"); // par défaut
+
+  // écoute les changements de scrollY
+  useEffect(() => {
+    const unsubscribe = scrollY.on("change", (latest) => {
+      if (latest < 800) {
+        setLogoColorClass("text-background");
+      } else {
+        setLogoColorClass("text-foreground");
+      }
+    });
+    return () => unsubscribe(); // clean-up
+  }, [scrollY]);
 
   
   // Couleurs adaptatives basées sur le scroll
@@ -17,6 +31,9 @@ export default function Header() {
   const textColorHover = useTransform(scrollY, [0, 800], ["rgba(255,255,255,1)", "rgba(55,65,81,1)"]);
   const buttonBg = useTransform(scrollY, [0, 800], ["rgba(255,255,255,0.1)", "rgba(59,130,246,0.1)"]);
   const buttonBgHover = useTransform(scrollY, [0, 800], ["rgba(255,255,255,0.2)", "rgba(59,130,246,0.2)"]);
+
+  
+
 
   return (
     <motion.header
@@ -38,14 +55,8 @@ export default function Header() {
             <span className="text-white font-bold text-sm">C</span>
 
           </div> */}
-          <div>
-           <Image
-            width={92}
-            height={92}
-            src={logoSrc}
-            alt={"CMP BIM logo"}
-          />
-          </div>
+          <LogoSvg className={`w-16 h-16 md:w-24 md:h-24 fill-current ${logoColorClass}`}/>
+
           {/* <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
             CMP BIM
           </h1> */}
