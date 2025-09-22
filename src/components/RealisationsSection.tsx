@@ -3,7 +3,7 @@ import RealisationCard from './RealisationCard';
 
 const realisationList = [
   {
-    title: "Village des Athlètes (Maquettes 3D)",
+    title: "Village olympique paris 2024 (Maquettes 3D)",
     folder: "Village_des_Athletes_-_VOP",
     description: "Modélisation, coordination phase étude et intégration attributaire. Evaluation des offres, coordination des maquettes phase EXE et constitution DOE BIM.",
     images: [
@@ -48,7 +48,7 @@ const realisationList = [
       ]
   },
   {
-    title: "Village des Athlètes (Plans 2D)",
+    title: "Village olympique paris 2024 (Plans 2D)",
     folder: "Village_des_Athletes_-_VOP_2D",
     description: "Production de plans 2D : synthèse réseaux, nivellement, coupe, giration, profil en long…",
     images: [  'VA_2d-1.png','VA_2d-9.png', 'VA_2d-5.png','VA_2d-6.png', 'VA_2d-7.png','VA_2d-3.png',  'VA_2d-8.png',  'VA_2d-4.png', 'VA_2d-2.png']
