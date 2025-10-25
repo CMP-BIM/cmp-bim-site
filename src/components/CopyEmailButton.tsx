@@ -6,7 +6,7 @@ export default function CopyEmailButton() {
   const [showToast, setShowToast] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("cmp.bim@outlook.fr").then(() => {
+    navigator.clipboard.writeText("contact@cmp-bim.com").then(() => {
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000); // Cache la notif après 3s
     });

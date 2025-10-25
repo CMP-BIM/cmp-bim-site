@@ -26,8 +26,8 @@ export default function AboutSection() {
 
             <div className="space-y-2">
               <p className="font-semibold">✉️ Email :</p>
-              <a href="mailto:cmp.bim@outlook.fr" className="underline text-blue-600">
-                cmp.bim@outlook.fr
+              <a href="mailto:contact@cmp-bim.com" className="underline text-blue-600">
+                contact@cmp-bim.com
               </a>
             </div>
 
